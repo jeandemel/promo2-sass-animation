@@ -1,17 +1,40 @@
 @import 'sprite.scss';
 
+/*
+La première manière de faire des animations 
+consistera à utiliser la propriété "transition" 
+à laquelle on pourra indiquer la propriété concernée
+par la transition, le temps de transition et autre.
+A ce moment là, une animation se déclenchera à 
+chaque fois que le style de l'élément est modifié 
+(soit par un hover, soit par le rajout d'une class
+via le javascript ou autre) pour faire la transition
+du style actuel vers le nouveau style
+*/
 p {
     font-size: 20px;
     transition: 2s;
 }
 
-p:hover {
+p.bloup {
     font-weight: bold;
     font-size: 40px;
     color: red;
     border:1px solid black;
 }
-
+/*
+La deuxième manière consiste à utiliser des keyframes
+et les propriétés animation.
+On commence par définir un keyframes (voir plus bas) qui définira
+les différentes étapes de l'animation.
+Une fois les étapes définies, on viendra ajouter à l'élément auquel
+on veut appliquer le keyframes plusieurs propriétés :
+animation-name pour dire le nom du keyframes à appliquer
+animation-duration pour dire le temps que prendra l'animation à s'exécuter
+animation-iteration-count pour dire combien de fois faire l'animation
+et bien d'autres.
+https://www.w3schools.com/cssref/css3_pr_animation.asp
+*/
 .redSquare {
     display:block;
     background-color:red;
@@ -25,6 +48,7 @@ p:hover {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 
 @keyframes changeColor {
     25% {

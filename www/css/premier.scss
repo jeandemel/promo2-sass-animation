@@ -1,3 +1,17 @@
+/*
+Le SCSS (pour Sassy CSS) est un langage permettant
+de faire du css classique ainsi qu'utiliser d'autres
+fonctionnalités absentes du css (fonctions, variables,
+règles imbriquées...)
+Le SCSS n'a pas vocation à être lu par le navigateur,
+celui ci ne comprenant que le CSS classique, à la place
+le SCSS devra être compilé par un compilateur sass qui générera
+des .css à partir des fichiers .scss
+C'est ces .css qu'il faudra indiqués dans notre html, mais à part
+pour ça, on n'y touchera pas.
+
+*/
+
 $maVariable: green;
 
 p {
