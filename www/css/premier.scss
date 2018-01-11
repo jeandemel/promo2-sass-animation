@@ -1,0 +1,14 @@
+$maVariable: green;
+
+p {
+    border: 1px solid black;
+    color: $maVariable;
+    span {
+        color: red;
+    }
+}
+
+section {
+    @extend p;
+    font-size: 200px;
+}
