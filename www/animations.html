@@ -8,8 +8,30 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <div class="redSquare"></div>
-    <p>text in paragraph</p>
+    <!-- <div class="redSquare"></div>
+    <p>text in paragraph</p> -->
+
+    <div class="char"></div>
+
+    <!-- <div class="menu">
+        My Menu
+        <div class="panel">
+            things in panel
+        </div>
+    </div> -->
     
+    <script>
+
+        let char = document.querySelector('.char');
+
+        char.addEventListener('click', function(){
+            char.style.animationName = 'walkRight, translate';
+        });
+
+        char.addEventListener('animationend', function() {
+            alert('bloup');
+        });
+    
+    </script>
 </body>
 </html>
